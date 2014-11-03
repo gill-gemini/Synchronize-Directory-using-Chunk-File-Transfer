@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<directory xmlns="urn:ietf:params:xml:ns:dirinfo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<file>
+		<name>File_A</name>
+		<size>123456</size>
+		<checkSum>01234567</checkSum>
+		<modificationTime>2002-05-30T09:00:00</modificationTime>
+		<modificationType>CREATE</modificationType>
+	</file>
+
+	<file>
+		<name>File_B</name>
+		<size>7890</size>		
+		<checkSum>8901ABCD</checkSum>
+		<modificationTime>2012-01-30T09:00:00</modificationTime>
+		<modificationType>MODIFY</modificationType>
+	</file>
+
+	<file>
+		<name>File_Deleted</name>
+		<size>6767890</size>		
+		<checkSum>8901ABCD</checkSum>
+		<modificationTime>2012-03-19T09:00:00</modificationTime>
+		<modificationType>DELETE</modificationType>
+	</file>
+
+</directory>

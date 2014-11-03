@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="testSrc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/jargs.jar" sourcepath="D:/ShaohongLaptop/WorkSpaces/purcell-jargs-11f5fe3/src">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/ShaohongLaptop/WorkSpaces/purcell-jargs-11f5fe3/doc/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/PDA/lib/commons-lang3-3.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/junit.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

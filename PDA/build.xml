@@ -1,0 +1,122 @@
+<!-- copied and modified from the example given in "http://ant.apache.org/manual/using.html" -->
+<project name="Protocol Design" default="dist" basedir=".">
+	<description>
+        build file for the protocol design assignment
+    </description>
+
+	<!-- set global properties for this build -->
+	<property name="src" location="src"/>
+	<property name="build" location="classes"/>
+	<property name="dist"  location="dist"/>
+	<property name="lib.dir" location="lib"/>
+	<path id="compiler-classpath">
+		<fileset dir="${lib.dir}" includes="**/*.jar"/>
+	</path>
+
+	<!-- Variables used for JUnit testing -->
+	<property name="test.src.dir" location="testSrc" />
+	<property name="test.classes.dir" location="testclasses" />
+	<property name="test.report.dir" location="testreport" />
+
+
+	<target name="init" depends="clean">
+
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+
+		<!-- Create the distribution directory -->
+		<mkdir dir="${dist}" />
+
+		<!-- create the directory to store testing classes-->
+		<mkdir dir="${test.classes.dir}" />
+
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac destdir="${build}" debug="true" includeantruntime="yes"
+			deprecation="false" optimize="false" failonerror="true">
+
+			<!-- Specify the location of java source code -->
+			<src path="${src}"/>
+
+			<!-- specify the location of the 3rd party libraries needed during compilation -->
+			<classpath refid="compiler-classpath"/>
+		</javac>
+
+
+		<!-- Compile the test java code from ${test.src.dir} into ${test.classes.dir} -->
+		<javac destdir="${test.classes.dir}" debug="true" includeantruntime="yes"
+			deprecation="false" optimize="false" failonerror="true">
+
+			<!-- Specify the location of java source code -->
+			<src path="${test.src.dir}"/>
+
+			<classpath>
+				<path refid="compiler-classpath"/>
+				<pathelement location="${build}"/>
+			</classpath>
+		</javac>
+		
+		<!-- copy the log4j.properties -->
+		<copy todir="${build}">
+			<fileset dir="${src}">
+				<include name="**/log4j.*"/>
+			</fileset>
+		</copy>
+
+		<!-- let's also copy the schema definition file to the class file directory-->
+		<copy todir="${build}">
+			<fileset dir="schema">
+				<include name="**/*.xsd"/>
+			</fileset>
+		</copy>		
+
+	</target>
+
+	<target name="dist" depends="compile"
+        description="generate the distribution" >
+
+		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+		<jar jarfile="${dist}/pda.jar" basedir="${build}"/>
+	</target>
+
+	<target name="clean" description="clear the artifacts directories" >
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+		<delete dir="${test.classes.dir}" />		
+	</target>
+
+
+	<!-- Run the JUnit Tests -->
+	<!-- Output is XML, could also be plain-->
+	<target name="test" depends="compile">
+
+		<!-- Create one line per classpath element-->
+		<pathconvert pathsep="${line.separator}" property="echo.classpath.string" refid="compiler-classpath" />
+		<echo message="compiler-classpath= ${echo.classpath.string}"/>
+		
+		<!-- echoproperties/ -->
+		
+		<junit printsummary="on" fork="false" haltonfailure="yes">
+			<!--classpath refid="test.classpath"/-->
+			
+			<classpath>
+				<path refid="compiler-classpath"/>
+				<pathelement location="${test.classes.dir}"/>
+				<pathelement location="${build}"/>
+			</classpath>
+			
+			<formatter type="xml" usefile="yes" />
+			
+			<batchtest>
+				<fileset dir="${test.classes.dir}">
+					<include name="**/Test*.class" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
+</project>

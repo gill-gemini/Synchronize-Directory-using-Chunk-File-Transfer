@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="urn:ietf:params:xml:ns:dirinfo" xmlns:tns="urn:ietf:params:xml:ns:dirinfo"
+	elementFormDefault="qualified">
+
+	<!-- Schema definition for a fileType: -->
+	<xs:element name="file">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="size" type="xs:integer" />
+				<xs:element name="checkSum" type="xs:string" />
+				<xs:element name="modificationTime" type="xs:dateTime" />
+				<xs:element name="modificationType">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="CREATE" />
+							<xs:enumeration value="MODIFY" />
+							<xs:enumeration value="DELETE" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<!-- Schema definition for a directory element: -->
+	<xs:element name="directory">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:file" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
