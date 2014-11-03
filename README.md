@@ -1,4 +1,6 @@
-The objective of this specification is to propose a solution to maintain the synchronization of a
+Synchronize-Directory-using-Chunk-File-Transfer
+===========================================================
+The objective of thisspecification is to propose a solution to maintain the synchronization of a
 directory shared between two hosts.
 We limit scope to the extent that there are only files, no sub-directories structures are allowed
 under in this “shared” directory.
