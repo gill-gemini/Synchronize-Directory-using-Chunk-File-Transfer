@@ -1,8 +1,6 @@
 /*
 
 snapper
-
-Created by Varun Singh on 10/3/2012.Updated for UDP 30/5/2012
 Note a lot of code is borrowed from here and there.
 gcc -Wall -pedantic snapper.c -lpcap -o snapper
 http://www.tcpdump.org/pcap.html
@@ -14,7 +12,7 @@ The TCP reset packets (TCP RST) are sent when the utility sees ACK packets.
 
 #define APP_NAME "snapper"
 #define APP_DESC "based on Sniffer example using libpcap"
-#define APP_COPYRIGHT "extended by Varun Singh / Copyright (c) 2005 The Tcpdump Group"
+#define APP_COPYRIGHT " / Copyright (c) 2005 The Tcpdump Group"
 #define APP_DISCLAIMER "THERE IS ABSOLUTELY NO WARRANTY FOR THIS PROGRAM.\n"
 
 #include <unistd.h>  //header for fork
