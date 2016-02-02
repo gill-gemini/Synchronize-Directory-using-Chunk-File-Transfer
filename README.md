@@ -4,6 +4,8 @@ The objective of thisspecification is to propose a solution to maintain the sync
 directory shared between two hosts.We limit scope to the extent that there are only files, no sub-directories structures are allowed
 under in this “shared” directory.
 
+
+
 ** Overview**
 SyncCFT works according to a pull model where each host can:
 Pull the file information such as name, timestamp, etc. from its peers. This kind of functions
