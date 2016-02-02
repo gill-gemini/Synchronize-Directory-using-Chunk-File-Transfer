@@ -1,17 +1,16 @@
 # Synchronize-Directory-using-Chunk-File-Transfer
 
 The objective of thisspecification is to propose a solution to maintain the synchronization of a
-directory shared between two hosts.
-We limit scope to the extent that there are only files, no sub-directories structures are allowed
+directory shared between two hosts.We limit scope to the extent that there are only files, no sub-directories structures are allowed
 under in this “shared” directory.
-** Overview**
 
+** Overview**
 SyncCFT works according to a pull model where each host can:
-● Pull the file information such as name, timestamp, etc. from its peers. This kind of functions
+Pull the file information such as name, timestamp, etc. from its peers. This kind of functions
 are called “Directory Info Synchronization Functions” (see section 4 for details). It helps
 local host to find out which files it has are outdated and which files are created/deleted on a
 remote host.
-● Initiate file transfer requests to pull the latest copy of a shared file from remote host.
+Initiate file transfer requests to pull the latest copy of a shared file from remote host.
 
 ** Terminology**
 
