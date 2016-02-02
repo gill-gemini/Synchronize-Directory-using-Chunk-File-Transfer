@@ -10,10 +10,10 @@
 
 * Run as the server: 
   ** To run the program as a syncCFT server, listening on port 7777, and the shared directory is "./SharedDir" 
-	java -cp "./dist/pda.jar;lib/*" SyncCFTServerApp -l 7777 -d ./SharedDir
+	`java -cp "./dist/pda.jar;lib/*" SyncCFTServerApp -l 7777 -d ./SharedDir`
 
 	If the environment is linux, use:
-	java -cp "./dist/pda.jar:lib/*" SyncCFTServerApp -l 7777 -d ./SharedDir
+	`java -cp "./dist/pda.jar:lib/*" SyncCFTServerApp -l 7777 -d ./SharedDir`
 	
   **** To add the loss model to the server, add noLoss2loss transition rate p and loss2loss transition rate q:
    java -cp "./dist/pda.jar;lib/*" SyncCFTServerApp -l 7777 -d ./SharedDir -p 0.1 -q 0.1
