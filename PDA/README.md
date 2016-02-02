@@ -1,5 +1,5 @@
 
-**Directory Structure**
+*Directory Structure
   - README.txt: This file.
   - src: directory that contains the java source code.
   - build.xml: the ant build file
