@@ -49,4 +49,6 @@ A group of chunks that is retrieved together signaled by the RETRIEVE transactio
 Retrieval session:
 The process which started from the first RETRIEVE request (sent from file receiver to the
 file sender to solicit a chunk group) and followed by the data transfer of a chunk group from the file
-sender to the file receiver and ended by a THANKS request (sent from
+sender to the file receiver and ended by a THANKS request.
+
+![Diagram for information retreival](https://github.com/gill-gemini/Synchronize-Directory-using-Chunk-File-Transfer/blob/master/informationretrieval.png)
