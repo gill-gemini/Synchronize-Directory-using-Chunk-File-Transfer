@@ -17,6 +17,8 @@ Pull the file information such as name, timestamp, etc. from its peers. This kin
 The commands and protocol messages used to get the latest directory info, i.e. list of files
 and corresponding timestamps from the remote peer.
 
+![Diagram of synchronise functions](https://github.com/gill-gemini/Synchronize-Directory-using-Chunk-File-Transfer/blob/master/synchronisefunctions.png)
+
 **Data Transfer Functions:**
 The commands and protocol messages used to transfer files between two hosts.
 
