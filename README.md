@@ -12,12 +12,12 @@ Pull the file information such as name, timestamp, etc. from its peers. This kin
 
 **Terminology**
 
-*Directory Synchronization Functions:*
+**Directory Synchronization Functions:**
 
 The commands and protocol messages used to get the latest directory info, i.e. list of files
 and corresponding timestamps from the remote peer.
 
-*Data Transfer Functions:*
+**Data Transfer Functions:**
 The commands and protocol messages used to transfer files between two hosts.
 
 *File Sender:*
@@ -25,23 +25,23 @@ The commands and protocol messages used to transfer files between two hosts.
 The host that acts as the data provider and sends the file data over the network to another
 node.
 
-File Receiver:
+*File Receiver:*
 
 The host on the recipient end that initiates the file data transfer session and ask the file
 sender to send file to it.
 
-chunk:
+*chunk:*
 
 A chunk refers to a unit of file data being transferred between two hosts.
 
-chunk size:
+*chunk size:*
 
 The size of a chunk of a file. In this spec, we set it to a hard-coded 1000 bytes.
 chunk number:
 Each chunk has a unique number that is of significance within a given data file being
 transferred.
 
-chunk group:
+*chunk group:*
 
 A group of chunks that is retrieved together signaled by the RETRIEVE transaction.
 Retrieval session:
