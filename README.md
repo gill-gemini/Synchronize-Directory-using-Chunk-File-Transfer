@@ -1,6 +1,6 @@
 # Synchronize-Directory-using-Chunk-File-Transfer
 
-The objective of thisspecification is to propose a solution to maintain the synchronization of a directory shared between two hosts.We limit scope to the extent that there are only files, no sub-directories structures are allowed under in this “shared” directory.
+The objective of this specification is to propose a solution to maintain the synchronization of a directory shared between two hosts.We limit scope to the extent that there are only files, no sub-directories structures are allowed under in this “shared” directory.
 
 
 
@@ -17,7 +17,7 @@ and corresponding timestamps from the remote peer.
 Data Transfer Functions:
 The commands and protocol messages used to transfer files between two hosts.
 
-File Sender:
+*File Sender:*
 
 The host that acts as the data provider and sends the file data over the network to another
 node.
