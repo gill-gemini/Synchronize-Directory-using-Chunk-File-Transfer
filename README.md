@@ -19,6 +19,8 @@ and corresponding timestamps from the remote peer.
 
 ![Diagram of synchronise functions](https://github.com/gill-gemini/Synchronize-Directory-using-Chunk-File-Transfer/blob/master/synchronisefunctions.png = 250x)
 
+<a href="url"><img src="https://github.com/gill-gemini/Synchronize-Directory-using-Chunk-File-Transfer/blob/master/synchronisefunctions.png="left" height="48" width="48" ></a>
+
 **Data Transfer Functions:**
 The commands and protocol messages used to transfer files between two hosts.
 
