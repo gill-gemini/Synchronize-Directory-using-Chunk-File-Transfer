@@ -54,3 +54,4 @@ file sender to solicit a chunk group) and followed by the data transfer of a chu
 sender to the file receiver and ended by a THANKS request.
 <img src="https://github.com/gill-gemini/Synchronize-Directory-using-Chunk-File-Transfer/blob/master/informationretrieval.png" width="300">
 
+Please look into the README.md file in PDA directory , to see how to make the client and server run.
