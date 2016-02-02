@@ -5,6 +5,7 @@ The objective of this specification is to propose a solution to maintain the syn
 
 
 **Overview**
+
 SyncCFT works according to a pull model where each host can:
 Pull the file information such as name, timestamp, etc. from its peers. This kind of functions are called “Directory Info Synchronization Functions” (see section 4 for details). It helps local host to find out which files it has are outdated and which files are created/deleted on a remote host.Initiate file transfer requests to pull the latest copy of a shared file from remote host.
 
@@ -12,9 +13,11 @@ Pull the file information such as name, timestamp, etc. from its peers. This kin
 **Terminology**
 
 *Directory Synchronization Functions:*
+
 The commands and protocol messages used to get the latest directory info, i.e. list of files
 and corresponding timestamps from the remote peer.
-Data Transfer Functions:
+
+*Data Transfer Functions:*
 The commands and protocol messages used to transfer files between two hosts.
 
 *File Sender:*
